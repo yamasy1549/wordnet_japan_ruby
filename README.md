@@ -1,8 +1,6 @@
 # WordnetJapan
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/wordnet_japan`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Ruby wrapper for 日本語WordNet(http://compling.hss.ntu.edu.sg/wnja/)
 
 ## Installation
 
@@ -22,7 +20,42 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Basic
+
+example:
+
+```ruby
+require "wordnet_japan"
+
+client = WordNetJapan::Client.new("wnjpn.db")
+words = client.related_words("学校", link: "上位語", step: 5)
+```
+
+output:
+
+```ruby
+=> {1=>
+  [{:synset=>
+     #<WordNetJapan::Synset:0x00007f81782e2128
+      synset: "08276342-n",
+      pos: "名詞",
+      name: "educational_institution",
+      src: "eng30">,
+    :words=>
+     [#<WordNetJapan::Word:0x00007f81782d3dd0
+       wordid: 17620,
+       lang: "eng",
+       lemma: "educational_institution",
+       pron: nil,
+       pos: "名詞">,
+      #<WordNetJapan::Word:0x00007f81782d3b78
+       wordid: 235230,
+       lang: "jpn",
+       lemma: "教育機関",
+       pron: nil,
+       pos: "名詞">]},
+       ...
+```
 
 ## Development
 
