@@ -1,6 +1,5 @@
-require "wordnet_japan/version"
-
-module WordnetJapan
-  class Error < StandardError; end
-  # Your code goes here...
+module WordNetJapan
 end
+
+require "wordnet_japan/initializer"
+require "wordnet_japan/client"
