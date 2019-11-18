@@ -10,11 +10,12 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Ruby wrapper for 日本語WordNet}
   spec.description   = %q{http://compling.hss.ntu.edu.sg/wnja/}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/yamasy1549/wordnet_japan_ruby"
   spec.license       = "MIT"
 
   spec.metadata["source_code_uri"] = "https://github.com/yamasy1549/wordnet_japan_ruby"
   spec.metadata["changelog_uri"] = "https://github.com/yamasy1549/wordnet_japan_ruby/releases"
+  spec.metadata["github_repo"] = "ssh://github.com/yamasy1549/wordnet_japan_ruby"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
