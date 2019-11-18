@@ -22,6 +22,9 @@ class WordNetJapan::Client
 
   def related_words(word, step: 1, **options)
     word = WordNetJapan::Word.find_by(lemma: word)
+
+    raise WordNetJapan::WordNotFoundError if word.nil?
+
     synsets = word.synsets
 
     step.times.to_h do |i|
